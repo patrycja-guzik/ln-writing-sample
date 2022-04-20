@@ -49,7 +49,7 @@ A symbolic link is a special file version that points to another file. It can be
 *This procedure provides exercises to practice hard and symbolic links creation.*
 
 **Prerequisites:**
-- Access to a Linux [shell](##Shell)
+- Access to a Linux [shell](#Shell)
 
 **Procedure:**
 1. Set up example directories and files.
@@ -63,7 +63,7 @@ Hard and symbolic links to the example files are created.
 *This procedure describes example directories and files creation.*
 
 **Prerequisites:**
-- Access to a Linux terminal
+- Access to a Linux [shell](#Shell)
 
 **Procedure:**
 1. Create a new `practice` directory using the `mkdir` command.
