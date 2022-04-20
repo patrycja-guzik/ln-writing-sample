@@ -128,11 +128,11 @@ $ ln -s example2.txt link2.txt
 ```
 $ readlink link2.txt
 ```
-
 **Expected output:**
 ```
 file2.txt
 ```
+
 **Result:**
 A new symlink file is created. 
 
