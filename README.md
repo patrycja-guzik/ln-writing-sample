@@ -1,7 +1,7 @@
 # Linux `ln` command overview
 *This section provides basic information on the `ln` command and its usage.*
 
-`ln` (*link*) is one of the commands you can write in the Linux [shell](##Shell).
+`ln` (*link*) is one of the commands you can write in the Linux [shell](#Shell).
 
 The most basic usage of the `ln` command allows you to create a link file (`link-name`) to your current file (`file-name`):
 ```
@@ -16,27 +16,27 @@ There are a few additional syntax options you can use:
 |`ln file-name directory`| Creates a hard link in the directory given by the user. The link name will be the same as the file name.|
 
 > **Note:**
-By default, the `ln` command creates hard links. To create a symbolic link, use the `-s` [argument](##command-options).
+By default, the `ln` command creates hard links. To create a symbolic link, use the `-s` [argument](#command-options).
 
 Typically, `ln` does not replace existing files. If you would try to create a link with a `link-name` of an existing file, you will get an error:
 ```
 ln: failed to create hard link 'link.txt': File exists
 ```
-Use the `-f` (*force*) [argument](##command-options) to replace an existing file.
+Use the `-f` (*force*) [argument](#command-options) to replace an existing file.
 
 ## Hard links overview
 *This section provides basic information on hard links.*
 
 Links are a method to refer to a file stored on the hard drive. They are a part of a file system that organizes directories and files.
 
-A hard link is an exact copy of an existing file. It shares the same inode, so the information on the file and its attributes (such as type of a file, size, physical address, or ownership).
+A hard link is an exact copy of an existing file. It shares the same [inode](#inode), so the information on the file and its attributes (such as type of a file, size, physical address, or ownership).
 
 > **Note:**
-Hard links do not use extra memory as they do not create a physical copy of the file. They serve as an additional way to access the original file stored in the inode.
+Hard links do not use extra memory as they do not create a physical copy of the file. They serve as an additional way to access the original file stored in the [inode](#inode).
 
 IMAGE
 
-The hard link points directly to the file's [inode](##inode), not the file itself. Because of that, you can change the original file's contents or its location, and your hard link will still work. You can even remove the original file, and it will be accessible through the hard link. It will not become invalid.
+The hard link points directly to the file's [inode](#inode), not the file itself. Because of that, you can change the original file's contents or its location, and your hard link will still work. You can even remove the original file, and it will be accessible through the hard link. It will not become invalid.
 
 ## Symbolic links overview
 *This section provides basic information on symbolic links.*
@@ -96,18 +96,18 @@ $ cd /tmp/practice
 ```
 $ ln example1.txt link1.txt
 ```
-3. Optional: Check if the hard link was created correctly by checking the inode number, using the `ln -i` command.
+3. Optional: Check if the hard link was created correctly by checking the [inode](#inode) number, using the `ln -i` command.
 ```
 $ ls -i file1.txt link1.txt 
 ```
 **Expected output:**
-Files have the same inode number.
+Files have the same [inode](#inode) number.
 ```
 522316 file1.txt  522316 link1.txt
 ```
 
 **Result:**
-A new file with the same inode number is created.
+A new file with the same [inode](#inode) number is created.
 
 ## Creating a symbolic link to an existing file
 *This procedure describes a symbolic link creation.*
@@ -124,7 +124,7 @@ $ cd /tmp/practice
 ```
 $ ln -s example2.txt link2.txt
 ```
-3. Optional: Check if the symbolic link was created correctly by checking the inode number using the `readlink` command.
+3. Optional: Check if the symbolic link was created correctly by checking the [inode](#inode) number using the `readlink` command.
 ```
 $ readlink link2.txt
 ```
@@ -139,7 +139,7 @@ A new symlink file is created.
 # Glossary
 
 ## inode
-The inode is a database that uniquely describes a file with its attributes. Every newly created file receives a new inode number.
+The [inode](#inode) is a database that uniquely describes a file with its attributes. Every newly created file receives a new [inode](#inode) number.
 
 ## Command options
 Command options (also known as command arguments) are a list of parameters that can control the command's behavior. Options can add additional actions to a command or change its behavior.
