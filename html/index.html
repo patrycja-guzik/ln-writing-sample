@@ -81,7 +81,7 @@ Hard and symbolic links to the example files are created. </p>
 </pre>
 <blockquote>
 <p><strong>Tip:</strong>
-Create your practice files in the temporary (<code>/tmp/</code>) directory. The next time your PC boots up, all files and directories will be deleted.</p>
+ Create your practice files in the temporary (<code>/tmp/</code>) directory. The next time your PC boots up, all files and directories will be deleted.</p>
 </blockquote>
 </li>
 <li><p>Create the two example files using the <code>touch</code> command.</p>
@@ -107,11 +107,12 @@ A new directory and two example files are created.</p>
 </li>
 <li>Optional: Check if the hard link was created correctly by checking the <a href="#inode">inode</a> number, using the <code>ln -i</code> command.<pre class="prettyprint">$ ls -i file1.txt link1.txt 
 </pre>
+ <strong>Expected output:</strong>
+ Files have the same <a href="#inode">inode</a> number.<pre class="prettyprint">522316 file1.txt  522316 link1.txt
+</pre>
 </li>
 </ol>
-<p><strong>Expected output:</strong>
-Files have the same <a href="#inode">inode</a> number.</p>
-<pre class="hljs"><code><span class="hljs-symbol">522316 </span>file1.txt  <span class="hljs-number">522316</span> link1.txt</code></pre><p><strong>Result:</strong>
+<p><strong>Result:</strong>
 A new file with the same <a href="#inode">inode</a> number is created.</p>
 <h2 id="creating-a-symbolic-link-to-an-existing-file"><a class="header-link" href="#creating-a-symbolic-link-to-an-existing-file"></a>Creating a symbolic link to an existing file</h2>
 <p><em>This procedure describes a symbolic link creation.</em></p>
@@ -129,10 +130,11 @@ A new file with the same <a href="#inode">inode</a> number is created.</p>
 </li>
 <li>Optional: Check if the symbolic link was created correctly by checking the <a href="#inode">inode</a> number using the <code>readlink</code> command.<pre class="prettyprint">$ readlink link2.txt
 </pre>
+ <strong>Expected output:</strong><pre class="prettyprint">file2.txt
+</pre>
 </li>
 </ol>
-<p><strong>Expected output:</strong></p>
-<pre class="hljs"><code>file2.txt</code></pre><p><strong>Result:</strong>
+<p><strong>Result:</strong>
 A new symlink file is created. </p>
 <h1 id="glossary"><a class="header-link" href="#glossary"></a>Glossary</h1>
 <h2 id="inode"><a class="header-link" href="#inode"></a>inode</h2>
