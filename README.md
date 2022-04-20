@@ -43,7 +43,7 @@ The hard link points directly to the file's [inode](#inode), not the file itself
 
 A symbolic link is a special file version that points to another file. It can be compared to the shortcut, popular in Microsoft Windows systems. Unlike a hard link, a symbolic link does not contain the data in the target file. It points to another entry somewhere in the file system. If the file or directory that the symbolic link points to gets deleted, the link becomes invalid.
 
-![alt text](https://github.com/patrycja-guzik/ln-writing-sample/blob/master/soft.jpg?raw=true)
+![symlinks](soft.png "Symbolic links")
 
 # Practising link creation
 *This procedure provides exercises to practice hard and symbolic links creation.*
