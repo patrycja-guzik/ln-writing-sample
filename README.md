@@ -67,16 +67,16 @@ Hard and symbolic links to the example files are created.
 
 **Procedure:**
 1. Create a new `practice` directory using the `mkdir` command.
-```
-$ mkdir -p /tmp/practice/
-```
-> **Tip:**
-Create your practice files in the temporary (`/tmp/`) directory. The next time your PC boots up, all files and directories will be deleted.
+    ```
+    $ mkdir -p /tmp/practice/
+    ```
+    > **Tip:**
+    Create your practice files in the temporary (`/tmp/`) directory. The next time your PC boots up, all files and directories will be deleted.
 
 2. Create the two example files using the `touch` command.
-```
-$ touch file1.txt file2.txt
-```
+    ```
+    $ touch file1.txt file2.txt
+    ```
 
 **Result:**
 A new directory and two example files are created.
@@ -89,22 +89,22 @@ A new directory and two example files are created.
 
 **Procedure:**
 1. Go to the `practice` directory using the `cd` command.
-```
-$ cd /tmp/practice
-```
+    ```
+    $ cd /tmp/practice
+    ```
 2. Create a hard link, within the current directory, to an `example1.txt` file using the `ln` command.
-```
-$ ln example1.txt link1.txt
-```
+    ```
+    $ ln example1.txt link1.txt
+    ```
 3. Optional: Check if the hard link was created correctly by checking the [inode](#inode) number, using the `ln -i` command.
-```
-$ ls -i file1.txt link1.txt 
-```
-**Expected output:**
-Files have the same [inode](#inode) number.
-```
-522316 file1.txt  522316 link1.txt
-```
+    ```
+    $ ls -i file1.txt link1.txt 
+    ```
+    **Expected output:**
+    Files have the same [inode](#inode) number.
+    ```
+    522316 file1.txt  522316 link1.txt
+    ```
 
 **Result:**
 A new file with the same [inode](#inode) number is created.
@@ -117,21 +117,21 @@ A new file with the same [inode](#inode) number is created.
 
 **Procedure:**
 1. Go to the `practice` directory using the `cd` command.
-```
-$ cd /tmp/practice
-```
+    ```
+    $ cd /tmp/practice
+    ```
 2. Create a symbolic link, within the current directory, to an `example2.txt` file using the `ln -s' command.
-```
-$ ln -s example2.txt link2.txt
-```
+    ```
+    $ ln -s example2.txt link2.txt
+    ```
 3. Optional: Check if the symbolic link was created correctly by checking the [inode](#inode) number using the `readlink` command.
-```
-$ readlink link2.txt
-```
-**Expected output:**
-```
-file2.txt
-```
+    ```
+    $ readlink link2.txt
+    ```
+    **Expected output:**
+    ```
+    file2.txt
+    ```
 
 **Result:**
 A new symlink file is created. 
