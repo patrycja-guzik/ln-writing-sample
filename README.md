@@ -34,7 +34,7 @@ A hard link is an exact copy of an existing file. It shares the same [inode](#in
 > **Note:**
 Hard links do not use extra memory as they do not create a physical copy of the file. They serve as an additional way to access the original file stored in the [inode](#inode).
 
-IMAGE
+![alt text](https://github.com/patrycja-guzik/ln-writing-sample/blob/master/hard.jpg?raw=true)
 
 The hard link points directly to the file's [inode](#inode), not the file itself. Because of that, you can change the original file's contents or its location, and your hard link will still work. You can even remove the original file, and it will be accessible through the hard link. It will not become invalid.
 
@@ -43,7 +43,7 @@ The hard link points directly to the file's [inode](#inode), not the file itself
 
 A symbolic link is a special file version that points to another file. It can be compared to the shortcut, popular in Microsoft Windows systems. Unlike a hard link, a symbolic link does not contain the data in the target file. It points to another entry somewhere in the file system. If the file or directory that the symbolic link points to gets deleted, the link becomes invalid.
 
-IMAGE
+![alt text](https://github.com/patrycja-guzik/ln-writing-sample/blob/master/soft.jpg?raw=true)
 
 # Practising link creation
 *This procedure provides exercises to practice hard and symbolic links creation.*
