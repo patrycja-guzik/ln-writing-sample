@@ -145,7 +145,7 @@ A new symlink file is created.
 # Glossary
 
 ## inode
-The inode is a database that uniquely describes a file with its attributes. Every newly created file receives a new [inode](#inode) number.
+The inode is a database that uniquely describes a file with its attributes. Every newly created file receives a new inode number.
 
 ## Command options
 Command options (arguments) are a list of parameters that can control the command's behavior. Options can add additional actions to a command or change its behavior.
