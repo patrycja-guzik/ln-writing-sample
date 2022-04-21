@@ -35,6 +35,9 @@ A hard link is an exact copy of an existing file. It shares the same [inode](#in
 Hard links do not use extra memory as they do not create a physical copy of the file. They serve as an additional way to access the original file stored in the [inode](#inode).
 
 ![hardlinks](hard.jpg?raw=true "Hard links")
+<p align = "center">
+Fig.1: Both files point to the same inode
+</p>
 
 The hard link points directly to the file's [inode](#inode), not the file itself. Because of that, you can change the original file's contents or its location, and your hard link will still work. You can even remove the original file, and it will be accessible through the hard link. It will not become invalid.
 
@@ -44,6 +47,9 @@ The hard link points directly to the file's [inode](#inode), not the file itself
 A symbolic link is a special file version that points to another file. It can be compared to the shortcut, popular in Microsoft Windows systems. Unlike a hard link, a symbolic link does not contain the data in the target file. It points to another entry somewhere in the file system. If the file or directory that the symbolic link points to gets deleted, the link becomes invalid.
 
 ![symlinks](soft.jpg?raw=true "Symbolic links")
+<p align = "center">
+Fig.2: Symlink file points to the original file, which points to the inode
+</p>
 
 # Practising link creation
 *This procedure provides exercises to practice hard and symbolic links creation.*
@@ -139,10 +145,10 @@ A new symlink file is created.
 # Glossary
 
 ## inode
-The [inode](#inode) is a database that uniquely describes a file with its attributes. Every newly created file receives a new [inode](#inode) number.
+The inode is a database that uniquely describes a file with its attributes. Every newly created file receives a new [inode](#inode) number.
 
 ## Command options
-Command options (also known as command arguments) are a list of parameters that can control the command's behavior. Options can add additional actions to a command or change its behavior.
+Command options (arguments) are a list of parameters that can control the command's behavior. Options can add additional actions to a command or change its behavior.
 
 ## Shell
 Shell is a command-line interface that directly exposes you to the operating system internals. It interprets your commands and passes the information on what to do with them to the operating system.
